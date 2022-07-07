@@ -1,4 +1,5 @@
 "use strict";
+
 const elForm = document.querySelector(".form");
 const elUsernameInput = document.querySelector(".username-input");
 const elPasswordInput = document.querySelector(".password-input");
@@ -20,6 +21,15 @@ elForm.addEventListener('submit', function(evt){
         email: "eve.holt@reqres.in",
         password: "cityslicka",
     }),  
+  })
+  .then((res) => res.json())
+  .then((data) => {
+    
+    if(data?.token){
+     window.localStorage.setItem('token', data.token);
+
+     window.location.replace("index.html");
+    }
   });
 
 });
