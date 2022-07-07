@@ -6,3 +6,7 @@ if (!token)  {
     window.location.replace("login.html");
   
 }
+
+logoutBtn.addEventListener('click', function(){
+    window.location.replace("login.html");
+});
