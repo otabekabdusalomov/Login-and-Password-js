@@ -15,11 +15,11 @@ elForm.addEventListener('submit', function(evt){
   fetch("https://reqres.in/api/login", {
     method: "POST",
     headers: {
-        "Content-Type": "applicetion/json",
+        "Content-Type": "application/json",
     },
     body: JSON.stringify ({
-        email: "eve.holt@reqres.in",
-        password: "cityslicka",
+        email: usernameInputValue,
+        password: passwordInputValue,
     }),  
   })
   .then((res) => res.json())
