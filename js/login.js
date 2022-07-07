@@ -16,9 +16,10 @@ elForm.addEventListener('submit', function(evt){
     headers: {
         "Content-Type": "applicetion/json",
     },
-    body: {
-        email: 
-    }
+    body: JSON.stringify ({
+        email: "eve.holt@reqres.in",
+        password: "cityslicka",
+    }),  
   });
 
-})
+});
